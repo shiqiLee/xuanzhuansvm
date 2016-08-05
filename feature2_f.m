@@ -1,0 +1,27 @@
+function A=feature2_f(a, b, c)
+A(1)=0;
+A(2)=mean(a(:));%均值
+A(3)=var(a(:));%方差
+A(4)=median(a(:));%中值
+A(5)=kurtosis(a(:));%峰度
+A(6)=skewness(a(:));%偏度
+A(7)=prctile(a(:),25);%四分位数
+A(8)=prctile(a(:),50);
+A(9)=prctile(a(:),75);
+[A(10),A(11)]=feature1_f(a);
+A(12)=mean(b(:));%均值
+A(13)=var(b(:));%方差
+A(14)=median(b(:));%中值
+A(15)=kurtosis(b(:));%峰度
+A(16)=skewness(b(:));%偏度
+A(17)=prctile(b(:),25);%四分位数
+A(18)=prctile(b(:),50);
+A(19)=prctile(b(:),75);
+[A(20),A(21)]=feature1_f(b);
+A(22)=abs(median(c(:,1)));
+A(23)=abs(median(c(:,2)));
+A(24)=abs(median(c(:,3)));
+A(25)=sqrt(A(22)^2+A(23)^2);
+A(26)=sqrt(A(23)^2+A(24)^2);
+A(27)=sqrt(A(24)^2+A(22)^2);
+
